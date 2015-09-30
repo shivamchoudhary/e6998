@@ -1,7 +1,9 @@
+This is the master branch! Please do not commit on this branch!!
 E6998 Project Milestones
 Here is the summary of work that needs to be done before October 14
 * Objective: Create a website which can take in user input and display different customized content based on certain probability.
-* Workflow:-
+
+Workflow:-
 * Shivam:-
 * Create backend for the system and parse the values from the query param.
 * Select particular div elements and construct the full dom
