@@ -3,7 +3,7 @@ import urlparse
 class Requests(object):
     
     def __init__(self,params):
-        self.param = param
+        self.param = params
     def tokenize(self,params):
         pass
 
