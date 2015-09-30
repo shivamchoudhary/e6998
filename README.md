@@ -1,4 +1,4 @@
-#E6998 Project Milestones
+E6998 Project Milestones
 Here is the summary of work that needs to be done before October 14
 Objective: Create a website which can take in user input and display different customized content based on certain probability.
 Workflow:-
