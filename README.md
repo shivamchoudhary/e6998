@@ -16,4 +16,4 @@ Workflow:-
 * Display the result which will be in form of HTML DOM.
 
 ## Wenyu:-
-* We should have a discussion and then decide.
+* Assemble the full dom and send it back.
