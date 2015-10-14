@@ -8,4 +8,3 @@ def read_attributes(fname):
         for attrib in attribs:
             attributes[attrib] = ""
     return attributes
-
