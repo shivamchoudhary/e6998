@@ -1,5 +1,5 @@
 import User
-from xml.dom import minidom
+from xml.dom.minidom import Document
 delimiter = "&"
 
 def tokenize(input):
@@ -8,15 +8,22 @@ def tokenize(input):
     for pairs in input:
         pairs = pairs.split("=")
         input_attribute[pairs[0]] = pairs[1]
+    make_dom(input_attribute)
     return input_attribute
 
-def make_dom():
-    doc = minidom.Document()
-    elem = doc.createElement("one")
-    elem.setAttribute("id","1")
-    doc.appendChild(elem)
-make_dom()
-User.User('shivam',tokenize("gender=m&nation=d"))
+def make_dom(input_attribute):
+    doc = Document()
+    base = doc.createElement("Attributes")
+    x = doc.appendChild(base)
+    for k,v in input_attribute.iteritems():
+        element = doc.createElement(k)
+        content = doc.createTextNode(v)
+        element.appendChild(content)
+        base.appendChild(element)
+    print doc.toprettyxml()
+
+tokenize("gender=m&nation=Germany&age=23")
+
 
 
 
