@@ -1,6 +1,6 @@
 Please commit/merge on develop and not on master!!
 E6998 Project Milestones
-Here is the summary of work that needs to be done before October 14
+Here is the summary of work that has been done till now
 * Objective: Create a script which can take in user input and display different
 customized content based on certain probability.
 
