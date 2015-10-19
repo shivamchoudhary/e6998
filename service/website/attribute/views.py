@@ -1,17 +1,25 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from xml.dom.minidom import Document
-# Create your views here.
-
+import Common
 def index(request):
-    attr = ['age','sex','gender']
-    data = {}
-    for val in attr:
-        data[val] = request.GET.get(val)
-    base = make_dom(data)
+    query_params = request.META['QUERY_STRING']
+    dict = tokenize(query_params)
+    base = make_dom(dict)
     x = "<html><body>Hi there %s</body></html>" %base
-    print base
     return HttpResponse(x)
+
+def tokenize(query_params):
+    delimiter = "&"
+    input = query_params.split(delimiter)
+    input_attribute = {}
+    for pairs in input:
+        pairs = pairs.split("=")
+        input_attribute[pairs[0]] = pairs[1]
+    return input_attribute
+
+
+
 def make_dom(dict):
     doc = Document()
     base = doc.createElement("Attributes")
@@ -21,5 +29,4 @@ def make_dom(dict):
         content = doc.createTextNode(v)
         element.appendChild(content)
         base.appendChild(element)
-    print base.toprettyxml()
     return base.toprettyxml()
