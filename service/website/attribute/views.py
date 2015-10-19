@@ -37,11 +37,10 @@ def make_dom(dict):
                 content = doc.createTextNode('Fixed')
                 element.appendChild(content)
                 base.appendChild(element)
-    element = doc.createElement("img")
-    element.attributes['src'] = "image.jpg"
-    element.attributes['alt'] = "text"
-    element.attributes['width'] = "10"
-    element.attributes['height']="10"
-    base.appendChild(element)
-    print base.toprettyxml()
+                element = doc.createElement("img")
+                element.attributes['src'] = "http://www.w3schools.com/images/lamp.gif"
+                element.attributes['alt'] = "text"
+                element.attributes['width'] = "100"
+                element.attributes['height']="100"
+                base.appendChild(element)
     return base.toprettyxml()
