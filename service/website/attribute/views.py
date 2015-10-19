@@ -3,13 +3,13 @@ from django.http import HttpResponse
 from xml.dom.minidom import Document
 import Common
 import random
-
-
+import os
+from PIL import Image
 def index(request):
     query_params = request.META['QUERY_STRING']
     dict = tokenize(query_params)
     base = make_dom(dict)
-    x = "<html><body>Hi there %s</body></html>" %base
+    x = "<html><body>Hi there %s</body> </html>" %base
     return HttpResponse(x)
 
 def tokenize(query_params):
@@ -29,19 +29,21 @@ def make_dom(dict):
     for k,v in dict.iteritems():
         if k in base_attributes:
             p = random.random()
-            print Common.config[k]
             if p <=Common.config[k]:
                 element = doc.createElement(k)
                 content = doc.createTextNode(v)
                 element.appendChild(content)
                 base.appendChild(element)
             elif p>Common.config[k]:
-                print '1'
                 element = doc.createElement(k)
-                content = doc.createTextNode("Fixed")
+                content = doc.createTextNode('Fixed')
                 element.appendChild(content)
                 base.appendChild(element)
-                
-                
+    element = doc.createElement("img")
+    element.attributes['src'] = "image.jpg"
+    element.attributes['alt'] = "text"
+    element.attributes['width'] = "10"
+    element.attributes['height']="10"
+    base.appendChild(element)
     print base.toprettyxml()
     return base.toprettyxml()
