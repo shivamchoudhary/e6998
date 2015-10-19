@@ -3,8 +3,6 @@ from django.http import HttpResponse
 from xml.dom.minidom import Document
 import Common
 import random
-import os
-from PIL import Image
 def index(request):
     query_params = request.META['QUERY_STRING']
     dict = tokenize(query_params)
