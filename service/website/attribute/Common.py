@@ -2,16 +2,25 @@ import json
 
 
 config = {
-        "age":0.5,
-        "sex":0.5,
-        "race":0.6,
-        "nationality":"0.7"
+        "age":{
+            "18":0.5
+            },
+        "gender":{
+            "male":0.5,
+            "female":0.5
+            },
+        "race":{
+            "caucasian":0.6
+            },
+        "nationality":{
+            "german":0.6,
+            "indian":0.5
+            }
         }
 
 def read_config():
     base_attributes =[]
-    for attr,prob in config.iteritems():
+    for attr,vals in config.iteritems():
         base_attributes.append(attr)
-
     return base_attributes
-
+read_config()

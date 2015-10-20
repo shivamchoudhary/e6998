@@ -27,12 +27,12 @@ def make_dom(dict):
     for k,v in dict.iteritems():
         if k in base_attributes:
             p = random.random()
-            if p <=Common.config[k]:
+            if p <=Common.config[k][v]:
                 element = doc.createElement(k)
                 content = doc.createTextNode(v)
                 element.appendChild(content)
                 base.appendChild(element)
-            elif p>Common.config[k]:
+            elif p>Common.config[k][v]:
                 element = doc.createElement(k)
                 content = doc.createTextNode('Fixed')
                 element.appendChild(content)
