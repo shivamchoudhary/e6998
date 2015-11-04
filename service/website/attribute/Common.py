@@ -1,30 +1,31 @@
 import json
 config = {
-        "age":{
-            "18":0.5
-            },
         "gender":{
             "male":{
-                0.7:"Testing",
-                "default":"Default"
+                0.7:"0.7 more beautiful",
+                0.2:"Default",
+                0.1:"Hi"
                 },
             "female":
                     {
-                "0.5":"Female",
-                "default":"Default"
+                0.4:"Female",
+                0.6:"Default"
                 }
             },
         "race":{
-            "caucasian":0.6
+            "caucasian":{
+                0.8:"Caucasian",
+                0.2:"Default"
+                }
             },
         "country":{
             "german":{
-                "0.6":"German",
-                "default":"Default"
+                0.6:"German",
+                0.4:"Default"
                 },
             "indian":{
-                "0.5":"Indian",
-                "default":"Default"
+                0.2:"indian",
+                0.8:"Default"
                 }
             }
         }

@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from xml.dom.minidom import Document
 import Common
 import random
+
 def index(request):
     query_params = request.META['QUERY_STRING']
     dict = tokenize(query_params)
@@ -27,25 +28,28 @@ def make_dom(dict):
     for k,v in dict.iteritems():
         if k in base_attributes:
             p = random.random()
-            a = Common.config[k][v] 
-            for k1,val1 in a.iteritems():
-                if (type(k1)==float and p>k1):
-                    print val1,p
+            sumK = 0
+            attr_values = Common.config[k][v] 
+            for k1 , val1 in attr_values.iteritems():
+                sumK += k1
+                if (p<sumK):
+                    element = doc.createElement(k)
+                    content = doc.createTextNode(val1)
+                    element.appendChild(content)
+                    base.appendChild(element)
                     break
-            if p <=Common.config[k][v]:
-                element = doc.createElement(k)
-                content = doc.createTextNode(v)
-                element.appendChild(content)
-                base.appendChild(element)
-            elif p>Common.config[k][v]:
-                element = doc.createElement(k)
-                content = doc.createTextNode('Fixed')
-                element.appendChild(content)
-                base.appendChild(element)
-                element = doc.createElement("img")
-                element.attributes['src'] = "http://www.w3schools.com/images/lamp.gif"
-                element.attributes['alt'] = "text"
-                element.attributes['width'] = "100"
-                element.attributes['height']="100"
-                base.appendChild(element)
     return base.toprettyxml()
+
+def dry_run(dict):
+    base_attributes = Common.read_config()
+    for k,v in dict.iteritems():
+        if k in base_attributes:
+            p = random.random()
+            sumK = 0
+            attr_values = Common.config[k][v] 
+            for k1 , val1 in attr_values.iteritems():
+                sumK += k1
+                if (p<sumK):
+                    return val1
+                    # break
+
