@@ -27,6 +27,11 @@ def make_dom(dict):
     for k,v in dict.iteritems():
         if k in base_attributes:
             p = random.random()
+            a = Common.config[k][v] 
+            for k1,val1 in a.iteritems():
+                if (type(k1)==float and p>k1):
+                    print val1,p
+                    break
             if p <=Common.config[k][v]:
                 element = doc.createElement(k)
                 content = doc.createTextNode(v)
