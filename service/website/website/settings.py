@@ -56,7 +56,7 @@ ROOT_URLCONF = 'website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/wenyu/Workspace/e6998/service/website/attribute/templates',],
+        'DIRS': [os.path.join("attribute/", "templates"),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
