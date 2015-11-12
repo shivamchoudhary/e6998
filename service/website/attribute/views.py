@@ -19,11 +19,12 @@ def test(request):
     query_params = request.META['QUERY_STRING']
     dict = tokenize(query_params)
     base = make_dom(dict)
-    print base
+    # print base
     t = loader.get_template('test.html')
-    c = Context({
-        'country': 'german'
-    })
+    # c = Context({
+        # 'country': 'german'
+    # })
+    c = Context(base)
     return render_to_response('test.html', context = c)
 
 def tokenize(query_params):
@@ -39,6 +40,7 @@ def make_dom(dict):
     doc = Document()
     base = doc.createElement("Attributes")
     x = doc.appendChild(base)
+    output = {}
     base_attributes = Common.read_config()
     for k,v in dict.iteritems():
         if k in base_attributes:
@@ -48,12 +50,9 @@ def make_dom(dict):
             for k1 , val1 in attr_values.iteritems():
                 sumK += k1
                 if (p<sumK):
-                    element = doc.createElement(k)
-                    content = doc.createTextNode(val1)
-                    element.appendChild(content)
-                    base.appendChild(element)
+                    output[k] = val1
                     break
-    return base.toprettyxml()
+    return output
 
 def dry_run(dict):
     base_attributes = Common.read_config()
