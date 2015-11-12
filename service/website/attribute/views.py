@@ -1,15 +1,22 @@
 from django.shortcuts import render
+from django.shortcuts import render_to_response 
 from django.http import HttpResponse
 from xml.dom.minidom import Document
 import Common
 import random
 
 def index(request):
-    query_params = request.META['QUERY_STRING']
-    dict = tokenize(query_params)
-    base = make_dom(dict)
-    x = "<html><body>Hi there %s</body> </html>" %base
-    return HttpResponse(x)
+    #query_params = request.META['QUERY_STRING']
+    #dict = tokenize(query_params)
+    #base = make_dom(dict)
+    #x = "<html><body>Hi there %s</body> </html>" %base
+    #return HttpResponse(x)
+    print "aa"
+    return render_to_response('base.html')
+
+def test(request):
+    print "bb"
+    return render_to_response('test.html')
 
 def tokenize(query_params):
     delimiter = "&"

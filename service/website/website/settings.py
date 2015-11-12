@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djfrontend',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Users/wenyu/Workspace/e6998/service/website/attribute/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -98,5 +99,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
+
+STATICFILES_DIRS = (os.path.join("attribute/", "static"),)
 
 STATIC_URL = '/static/'

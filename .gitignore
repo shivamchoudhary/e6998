@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+#SWP file
+*.swp
+
 # Java class file
 *.class
 
