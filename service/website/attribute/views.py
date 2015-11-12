@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import render_to_response 
 from django.http import HttpResponse
+from django.template import loader, Context
 from xml.dom.minidom import Document
 import Common
 import random
@@ -15,8 +16,15 @@ def index(request):
     return render_to_response('base.html')
 
 def test(request):
-    print "bb"
-    return render_to_response('test.html')
+    query_params = request.META['QUERY_STRING']
+    dict = tokenize(query_params)
+    base = make_dom(dict)
+    print base
+    t = loader.get_template('test.html')
+    c = Context({
+        'country': 'german'
+    })
+    return render_to_response('test.html', context = c)
 
 def tokenize(query_params):
     delimiter = "&"
