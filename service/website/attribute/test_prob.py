@@ -25,6 +25,26 @@ def testing():
                     print "Try with more iterations"
 
 
-
-testing()
-
+class Test(unittest.TestCase):
+    def testing(self):
+        config = Common.config
+        for k,v in config.iteritems():
+            for k1, val1 in v.iteritems():
+                output = {}
+                for i in range(0,iterations):
+                    result = views.make_dom({k:k1})
+                    result = result[k]
+                    try:
+                        output[result] +=1
+                    except KeyError:
+                        output[result] = 1
+                for prob,values in val1.iteritems():
+                    try:
+                        est_prob = output[values]/float (iterations)
+                    except KeyError:
+                        continue
+                    result = est_prob-prob
+                    self.assertTrue(result<0.1)
+# testing()
+if __name__=="__main__":
+    unittest.main()
