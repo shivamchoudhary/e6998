@@ -17,6 +17,7 @@
 
     <link href="{% static "style.css" %}" rel="stylesheet">
     <link href="{% static "plugins/morris.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 {% endblock head_css %}
 
 {% block body_js %}
@@ -84,13 +85,13 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Chart</h3>
                             </div>
-                            <div class="panel-body">
-                                <div id="morris-area-chart"></div>
+                            <div class="pane-body">
+                                <div id="line-chart"></div>
                             </div>
                         </div>
                     </div>
