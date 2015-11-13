@@ -34,6 +34,7 @@
     {% block djfrontend_ios_fix %}
     {% endblock djfrontend_ios_fix %}
 
+    <script src="{% static "js/base.js" %}"></script>
     <script src="{% static "js/plugins/morris/raphael.min.js" %}"></script>
     <script src="{% static "js/plugins/morris/morris.min.js" %}"></script>
     <script src="{% static "js/plugins/morris/morris-data.js" %}"></script>
@@ -46,10 +47,10 @@
 
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">Data Observertory Test Bench</a>
+                <a class="navbar-brand" href="">Data Observertory Test Bench</a>
             </div>
             <ul class="nav navbar-nav navbar-left">
-                <li><a href="/index/test/">Test Page</a></li>
+                <li><a href="/index/test/" id="testUrl" onclick="updateUrl()">Test Page</a></li>
             </ul>
         </nav>
 
@@ -68,6 +69,17 @@
                                 <i class="fa fa-dashboard"></i> Dashboard
                             </li>
                         </ol>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group" id="inputForms">
+                            <label for="country">Country:</label>
+                            <input type="text" class="form-control" id="country"></input>
+                            <label for="gender">Gender:</label>
+                            <input type="text" class="form-control" id="gender"></input>
+                        </div>
                     </div>
                 </div>
 
