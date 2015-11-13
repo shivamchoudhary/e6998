@@ -27,10 +27,7 @@ def tokenize(query_params):
     return input_attribute
 
 def make_dom(dict):
-    doc = Document()
-    base = doc.createElement("Attributes")
-    x = doc.appendChild(base)
-    output = {}
+    attr_dict = {}
     base_attributes = Common.read_config()
     for k,v in dict.iteritems():
         if k in base_attributes:
@@ -40,19 +37,6 @@ def make_dom(dict):
             for k1 , val1 in attr_values.iteritems():
                 sumK += k1
                 if (p<sumK):
-                    output[k] = val1
+                    attr_dict[k] = val1
                     break
-    return output
-
-def dry_run(dict):
-    base_attributes = Common.read_config()
-    for k,v in dict.iteritems():
-        if k in base_attributes:
-            p = random.random()
-            sumK = 0
-            attr_values = Common.config[k][v] 
-            for k1 , val1 in attr_values.iteritems():
-                sumK += k1
-                if (p<sumK):
-                    return val1
-
+    return attr_dict

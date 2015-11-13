@@ -2,9 +2,8 @@ import json
 config = {
         "gender":{
             "male":{
-                0.7:"0.7 more beautiful",
-                0.2:"Default",
-                0.1:"Hi"
+                0.7:"Male",
+                0.3:"Default"
                 },
             "female":
                     {
@@ -19,12 +18,12 @@ config = {
                 }
             },
         "country":{
-            "german":{
+            "germany":{
                 0.6:"German",
                 0.4:"Default"
                 },
-            "indian":{
-                0.2:"indian",
+            "india":{
+                0.2:"Indian",
                 0.8:"Default"
                 }
             }
@@ -35,4 +34,3 @@ def read_config():
     for attr,vals in config.iteritems():
         base_attributes.append(attr)
     return base_attributes
-# read_config()
