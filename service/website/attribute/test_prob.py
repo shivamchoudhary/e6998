@@ -14,7 +14,6 @@ def testing():
                     output[result] +=1
                 except KeyError:
                     output[result] = 1
-            print output
             for prob,values in val1.iteritems():
                 try:
                     est_prob = output[values]/float (iterations)
