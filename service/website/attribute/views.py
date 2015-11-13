@@ -5,7 +5,7 @@ from django.template import loader, Context
 from xml.dom.minidom import Document
 import Common
 import random
-
+import test_prob
 def index(request):
     return render_to_response('base.html')
 
@@ -16,7 +16,8 @@ def test(request):
     t = loader.get_template('test.html')
     c = Context(base)
     return render_to_response('test.html', context = c)
-
+def dry_run():
+    test_prob.testing()
 def tokenize(query_params):
     delimiter = "&"
     input = query_params.split(delimiter)
@@ -40,3 +41,4 @@ def make_dom(dict):
                     attr_dict[k] = val1
                     break
     return attr_dict
+
