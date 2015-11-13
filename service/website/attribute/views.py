@@ -7,23 +7,13 @@ import Common
 import random
 
 def index(request):
-    #query_params = request.META['QUERY_STRING']
-    #dict = tokenize(query_params)
-    #base = make_dom(dict)
-    #x = "<html><body>Hi there %s</body> </html>" %base
-    #return HttpResponse(x)
-    print "aa"
     return render_to_response('base.html')
 
 def test(request):
     query_params = request.META['QUERY_STRING']
     dict = tokenize(query_params)
     base = make_dom(dict)
-    # print base
     t = loader.get_template('test.html')
-    # c = Context({
-        # 'country': 'german'
-    # })
     c = Context(base)
     return render_to_response('test.html', context = c)
 
@@ -65,5 +55,4 @@ def dry_run(dict):
                 sumK += k1
                 if (p<sumK):
                     return val1
-                    # break
 
