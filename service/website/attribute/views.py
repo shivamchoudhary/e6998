@@ -5,6 +5,7 @@ from django.template import loader, Context
 from xml.dom.minidom import Document
 import Common
 import random
+import json
 def index(request):
     return render_to_response('base.html')
 
@@ -15,6 +16,13 @@ def test(request):
     t = loader.get_template('test.html')
     c = Context(base)
     return render_to_response('test.html', context = c)
+
+def chart(request):
+    response_data = {}
+    response_data['message'] = 'ajax message'
+    number_data = [{'y': '0.5', 'a': 100, 'b': 100},{'y':'0.6', 'a':90, 'b':90}]
+    response_data['chartInfo'] = number_data
+    return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 def tokenize(query_params):
     delimiter = "&"

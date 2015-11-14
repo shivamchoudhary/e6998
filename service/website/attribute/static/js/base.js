@@ -23,17 +23,25 @@ function readInput() {
     return dict;
 }
 
-$(function() {
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+        var data = JSON.parse(xhttp.responseText);
+        updateChart(data);
+    }
+  };
+  xhttp.open("GET", "/index/chart/", true);
+  xhttp.send();
+}
 
-var data = [
-      { y: '0.6', a: 90,  b: 70},
-      { y: '0.7', a: 50, b: 90},
-      { y: '0.8', a: 65,  b: 75},
-      { y: '0.9', a: 50,  b: 50},
-      { y: '1.0', a: 160, b: 95}
-    ],
+var morrisChart = null;
+
+function updateChart(chart_data) {
+    var number_data = chart_data.chartInfo;
+    console.log(number_data);
     config = {
-      data: data,
+      data: number_data,
       xkey: 'y',
       ykeys: ['a', 'b'],
       labels: ['Detected P', 'Generated P'],
@@ -45,7 +53,11 @@ var data = [
       pointFillColors:['#ffffff'],
       pointStrokeColors: ['black'],
       lineColors:['gray','red']
-  };
-config.element = 'line-chart';
-Morris.Line(config);
-});
+     };
+    config.element = 'line-chart';
+    if (morrisChart == null) {
+        morrisChart = Morris.Line(config);   
+    } else {
+        morrisChat.setData(config);
+    }
+}
