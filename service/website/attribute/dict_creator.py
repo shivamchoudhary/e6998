@@ -1,5 +1,5 @@
 import os
-
+import pprint
 def create_dict():
     attr_dict = {}
     for file in os.listdir('/home/shivam/OpenWPM/demo_results'):
@@ -11,4 +11,6 @@ def create_dict():
     attr_dict['all_values'] = {}
     all_geo = ['germany','india']
     attr_dict['all_values']['geo']=all_geo
+    f = open('file.json','w')
+    pprint.pprint(attr_dict,f)
 create_dict()
