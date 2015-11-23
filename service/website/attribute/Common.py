@@ -1,8 +1,9 @@
 import json
 import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.join(BASE_DIR,"attribute")
 def open_config():
-
-    with open('/home/shivam/e6998/service/website/attribute/config.json') as conf:
+    with open(BASE_DIR+"/config.json") as conf:
         config = json.load(conf)
     return config
 def read_config():
