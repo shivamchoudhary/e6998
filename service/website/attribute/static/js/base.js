@@ -42,9 +42,9 @@ function updateChart(chart_data) {
     console.log(number_data);
     config = {
       data: number_data,
-      xkey: 'y',
-      ykeys: ['a', 'b'],
-      labels: ['Detected P', 'Generated P'],
+      xkey: 'probability',
+      ykeys: ['numberOfSuccess'],
+      labels: ['Detected P'],
       fillOpacity: 0.6,
       hideHover: 'auto',
       behaveLikeLine: true,
