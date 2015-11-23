@@ -36,13 +36,14 @@ def tokenize(query_params):
 def make_dom(dict):
     attr_dict = {}
     base_attributes = Common.read_config()
+    config = Common.open_config()
     for k,v in dict.iteritems():
         if k in base_attributes:
             p = random.random()
             sumK = 0
-            attr_values = Common.config[k][v] 
+            attr_values = config[k][v]
             for k1 , val1 in attr_values.iteritems():
-                sumK += k1
+                sumK += float(k1)
                 if (p<sumK):
                     attr_dict[k] = val1
                     break
