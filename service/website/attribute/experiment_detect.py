@@ -22,7 +22,3 @@ class pvals(object):
         return self.pvals
 
 
-
-p = pvals()
-print p.num_success()
-
