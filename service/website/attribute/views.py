@@ -6,6 +6,8 @@ from xml.dom.minidom import Document
 import Common
 import random
 import json
+import experiment_detect
+
 def index(request):
     return render_to_response('base.html')
 
