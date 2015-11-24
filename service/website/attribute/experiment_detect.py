@@ -6,17 +6,17 @@ filename = ['pvalues0.1.json',
         'pvalues0.9.json']
 class pvals(object):
     def __init__(self):
-        self.prob = {"0.1":"",
-                "0.5":"",
-                "0.9":""}
+        self.prob = {0.1:"",
+                0.5:"",
+                0.9:""}
         self.threshold_detection  = 10^-3
     def run_exp(self):
         for files in filename:
             self.pvals = self.load_pvals(files)
             probability = files.split(".json")[0]
-            probability = probability.split("pvalues")[1]
+            probability = int(probability.split("pvalues")[1])
             self.prob[probability] = self.num_success()
-        return self.prob
+        return dict(sorted(self.prob.iteritems()))
     def num_experiment(self):
         return len(self.pvals.keys())
     def num_success(self):
@@ -32,3 +32,4 @@ class pvals(object):
         with open(BASE_DIR + fname) as pvalf:
             self.pvals = json.load(pvalf)
         return self.pvals
+
