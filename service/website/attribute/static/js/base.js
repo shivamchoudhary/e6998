@@ -42,8 +42,8 @@ function updateChart(chart_data) {
     console.log(number_data);
     config = {
       data: number_data,
-      xkey: 'probability',
-      ykeys: ['numberOfSuccess'],
+      xkey: 'y',
+      ykeys: ['s'],
       labels: ['Detected P'],
       fillOpacity: 0.6,
       hideHover: 'auto',
