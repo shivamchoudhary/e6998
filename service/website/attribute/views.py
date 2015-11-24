@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.template import loader, Context
 from xml.dom.minidom import Document
 import Common
+from collections import OrderedDict
 import random
 import json
 import experiment_detect
@@ -25,8 +26,9 @@ def chart(request):
     pvals = experiment_detect.pvals()
     #num_experiment = pvals.num_experiment()
     experiment_prob = pvals.run_exp()
+    ordered_prob =  OrderedDict(sorted(experiment_prob.items()))
     number_data = []
-    for k, v in experiment_prob.iteritems():
+    for k, v in ordered_prob.iteritems():
         current_data = {}
         current_data['y'] = k
         current_data['s'] = v
@@ -35,7 +37,7 @@ def chart(request):
     number_data = [{'y': '0.9', 's': 1}]
             #,{'y':'0.6', 'a':90, 'b':90}]
     """
-    print number_data
+    #print number_data
     response_data['chartInfo'] = number_data
     return HttpResponse(json.dumps(response_data), content_type="application/json")
 

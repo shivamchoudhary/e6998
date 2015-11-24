@@ -14,9 +14,9 @@ class pvals(object):
         for files in filename:
             self.pvals = self.load_pvals(files)
             probability = files.split(".json")[0]
-            probability = int(probability.split("pvalues")[1])
+            probability = float(probability.split("pvalues")[1])
             self.prob[probability] = self.num_success()
-        return dict(sorted(self.prob.iteritems()))
+        return self.prob
     def num_experiment(self):
         return len(self.pvals.keys())
     def num_success(self):
