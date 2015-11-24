@@ -26,6 +26,9 @@ class pvals(object):
                 self.success+=1
         return self.success
     def load_pvals(self,fname):
-        with open(fname) as pvalf:
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        BASE_DIR = os.path.join(BASE_DIR,"attribute/") 
+        print BASE_DIR + fname
+        with open(BASE_DIR + fname) as pvalf:
             self.pvals = json.load(pvalf)
         return self.pvals

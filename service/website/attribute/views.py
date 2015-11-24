@@ -23,12 +23,19 @@ def chart(request):
     response_data = {}
     response_data['message'] = 'ajax message'
     pvals = experiment_detect.pvals()
-    num_experiment = pvals.num_experiment()
-    num_success = pvals.num_success()
-    number_data = [{'propability': '0.9', 'numberOfSuccess': num_experiment}]
-    print num_success
-    number_data = [{'y': '0.9', 's': num_success}]
+    #num_experiment = pvals.num_experiment()
+    experiment_prob = pvals.run_exp()
+    number_data = []
+    for k, v in experiment_prob.iteritems():
+        current_data = {}
+        current_data['y'] = k
+        current_data['s'] = v
+        number_data.append(current_data)
+    """ morris chart data format
+    number_data = [{'y': '0.9', 's': 1}]
             #,{'y':'0.6', 'a':90, 'b':90}]
+    """
+    print number_data
     response_data['chartInfo'] = number_data
     return HttpResponse(json.dumps(response_data), content_type="application/json")
 
