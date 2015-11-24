@@ -25,7 +25,8 @@ def chart(request):
     pvals = experiment_detect.pvals()
     num_experiment = pvals.num_experiment()
     num_success = pvals.num_success()
-    number_data = [{'propability': '0.9', 'numberOfSuccess': num_success}]
+    number_data = [{'propability': '0.9', 'numberOfSuccess': num_experiment}]
+    print num_success
             #,{'y':'0.6', 'a':90, 'b':90}]
     response_data['chartInfo'] = number_data
     return HttpResponse(json.dumps(response_data), content_type="application/json")
