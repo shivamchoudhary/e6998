@@ -35,6 +35,20 @@ function loadDoc() {
   xhttp.send();
 }
 
+function updateConfiguration() {
+    var configuration = document.getElementById("comment");
+    //console.log(configuration.value);
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            window.alert("success!");
+        }
+    };
+    xhttp.open("POST", "/index/configure/", true);
+    xhttp.send(configuration.value);
+
+}
+
 var morrisChart = null;
 
 function updateChart(chart_data) {

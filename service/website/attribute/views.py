@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response 
 from django.http import HttpResponse
 from django.template import loader, Context
+from django.core.files import File
+from django.views.decorators.csrf import csrf_exempt
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
 from xml.dom.minidom import Document
 import Common
 from collections import OrderedDict
@@ -18,7 +22,17 @@ def test(request):
     base = make_dom(dict)
     t = loader.get_template('test.html')
     c = Context(base)
-    return render_to_response('test.html', context = c)
+
+@csrf_exempt
+def configure(request):
+    if request.META['REQUEST_METHOD'] == 'GET':
+        print "GET"
+        return render_to_response('configure.html')
+    else:
+        print "POST"
+        with open('./attribute/config.json', 'w') as f:
+            f.write(request.body)
+        return HttpResponse("Successfully received!") 
 
 def chart(request):
     response_data = {}
