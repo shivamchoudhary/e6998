@@ -22,6 +22,7 @@ def test(request):
     base = make_dom(dict)
     t = loader.get_template('test.html')
     c = Context(base)
+    return render_to_response('test.html', context = c)
 
 @csrf_exempt
 def configure(request):
