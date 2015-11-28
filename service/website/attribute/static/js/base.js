@@ -36,8 +36,12 @@ function loadDoc() {
 }
 
 function updateConfiguration() {
-    var configuration = document.getElementById("config_json");
-    //console.log(configuration.value);
+    var configuration = {}; 
+    configuration["config"] = document.getElementById("config_json").value;
+    configuration["sites"] = document.getElementById("config_sites").value;
+    configuration["openwpm_dir"] = document.getElementById("openwpm_dir").value;
+    configuration["iterations"] = document.getElementById("iter").value;
+    configuration["num_browers"] = document.getElementById("num_browser").value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -45,8 +49,9 @@ function updateConfiguration() {
         }
     };
     xhttp.open("POST", "/index/configure/", true);
-    xhttp.send(configuration.value);
-
+    var json_configuration = JSON.stringify(configuration);
+    xhttp.send(json_configuration);
+    console.log(json_configuration);
 }
 
 var morrisChart = null;

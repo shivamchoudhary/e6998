@@ -12,6 +12,7 @@ from collections import OrderedDict
 import random
 import json
 import experiment_detect
+import openwpm_wrapper
 
 def index(request):
     return render_to_response('base.html')
@@ -27,12 +28,12 @@ def test(request):
 @csrf_exempt
 def configure(request):
     if request.META['REQUEST_METHOD'] == 'GET':
-        print "GET"
         return render_to_response('configure.html')
     else:
-        print "POST"
+        json_data = json.loads(request.body)
+        print json_data 
         with open('./attribute/config.json', 'w') as f:
-            f.write(request.body)
+            f.write(json_data["config"])
         return HttpResponse("Successfully received!") 
 
 def chart(request):
