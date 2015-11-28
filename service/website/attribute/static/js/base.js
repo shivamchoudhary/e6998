@@ -36,7 +36,7 @@ function loadDoc() {
 }
 
 function updateConfiguration() {
-    var configuration = document.getElementById("comment");
+    var configuration = document.getElementById("config_json");
     //console.log(configuration.value);
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
