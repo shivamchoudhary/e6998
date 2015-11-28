@@ -1,7 +1,9 @@
 import os
 import sys
 class startExperiment(object):
-
+    """
+    Wrapper for OpenWPM. Changes the directory to interact with testbench_wrapper.
+    """
     def __init__(self,openwpm_dir,NUM_BROWSERS,ITERATIONS,sites):
         self.openwpm_dir = openwpm_dir
         self.ITERATIONS = ITERATIONS
@@ -14,12 +16,3 @@ class startExperiment(object):
         import testbench_wrapper
         Exp = testbench_wrapper.Experiment(self.NUM_BROWSERS,self.ITERATIONS,
                 self.sites)
-
-
-
-
-
-def main():
-    a = startExperiment('/home/shivam/OpenWPM','4','4')
-if __name__=="__main__":
-    main()
