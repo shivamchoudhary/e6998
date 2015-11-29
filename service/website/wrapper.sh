@@ -1,3 +1,4 @@
 #!/bin/bash
 cd $OPENWPM_DIR
-python testbench_wrapper.py
+echo $NUM_BROWSERS,$ITERATIONS,$sites
+python testbench_wrapper.py $NUM_BROWSERS $ITERATIONS $sites
