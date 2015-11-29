@@ -13,7 +13,8 @@ class startExperiment(object):
     It has been patched so that it calls a script which changes the directory.
 
     """
-    def __init__(self,openwpm_dir,NUM_BROWSERS,ITERATIONS,sites):
+    def __init__(self, openwpm_dir, NUM_BROWSERS, ITERATIONS, sites, 
+            dataObservatory_dir,fname):
         """
         Initiliaze the variables.
         """
@@ -21,6 +22,8 @@ class startExperiment(object):
         os.environ['ITERATIONS'] = ITERATIONS
         os.environ['NUM_BROWSERS'] = NUM_BROWSERS
         os.environ['sites'] = sites
+        os.environ['dataObservatory_dir'] = dataObservatory_dir
+        os.environ['fname'] = fname
         self.runBash()
     def runBash(self):
         subprocess.call('./wrapper.sh',shell=True)
