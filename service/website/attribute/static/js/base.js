@@ -42,6 +42,7 @@ function updateConfiguration() {
     configuration["openwpm_dir"] = document.getElementById("openwpm_dir").value;
     configuration["iterations"] = document.getElementById("iter").value;
     configuration["num_browers"] = document.getElementById("num_browser").value;
+    configuration["db_dir"] = document.getElementById("db_dir").value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
