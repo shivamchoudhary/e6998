@@ -31,7 +31,6 @@ def configure(request):
         return render_to_response('configure.html')
     else:
         json_data = json.loads(request.body)
-        print json_data 
         with open('./attribute/config.json', 'w') as f:
             f.write(json_data["config"])
         openwpm_wrapper.startExperiment(json_data['openwpm_dir'], json_data['num_browers'], json_data['iterations'], json_data['sites'])
