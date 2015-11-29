@@ -25,6 +25,3 @@ class startExperiment(object):
     def runBash(self):
         subprocess.call('./wrapper.sh',shell=True)
 
-
-a  =startExperiment('/home/shivam/OpenWPM','1','1','http://localhost:8000'
-        '/index/test/?country=india')
