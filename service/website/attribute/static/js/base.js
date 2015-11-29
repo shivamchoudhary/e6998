@@ -43,6 +43,7 @@ function updateConfiguration() {
     configuration["iterations"] = document.getElementById("iter").value;
     configuration["num_browers"] = document.getElementById("num_browser").value;
     configuration["dataObservatory_dir"] = document.getElementById("db_dir").value;
+    configuration["fname"] = document.getElementById("file_name").value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
