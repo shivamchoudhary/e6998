@@ -37,7 +37,7 @@ def configure(request):
         print json_data['iterations']
         print json_data['num_browers']
         print json_data['sites']
-        print json_data['db_dir']
+        print json_data['dataObservatory_dir']
         openwpm_wrapper.startExperiment(json_data['openwpm_dir'], json_data['num_browers'], json_data['iterations'], json_data['sites'])
         return HttpResponse("Successfully received!") 
 
