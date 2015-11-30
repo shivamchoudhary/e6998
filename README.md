@@ -11,5 +11,7 @@ customized content based on certain probability.
 * Evaluate per page pvalues for detection.
 * Plot detection vs probability graph.
 * Plot self evaluation graph.
-
+* Find the actual meaning of pvalues. Is that detected per dom or differently
+* Wenyu: Can you make the DOMS a bit more complicated with some base js and some other capabilities like pictures etc.
+* Add various testing methodology. The testbench is wringed by a wire for now
 
