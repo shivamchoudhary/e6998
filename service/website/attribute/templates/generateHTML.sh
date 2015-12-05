@@ -1,6 +1,6 @@
 #!/bin/bash
  
-size=100
+size=5
 echo "<html>" > test.html
 echo "\t<head>" >> test.html
 echo "\t\t<Data Observertory Test Page>" >> test.html
