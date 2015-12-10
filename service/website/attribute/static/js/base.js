@@ -99,7 +99,7 @@ function updateChart(chart_data) {
     config = {
       data: number_data,
       xkey: 'y',
-      ykeys: ['s'],
+      ykeys: ['prob' + prob_data.toString()],
       labels: ['Detected Success Rate'],
       fillOpacity: 0.6,
       hideHover: 'auto',
@@ -110,12 +110,14 @@ function updateChart(chart_data) {
       pointFillColors:['#ffffff'],
       pointStrokeColors: ['black'],
       lineColors:['gray','red'],
-      goals:[prob_data]
+      goals:[prob_data * 100]
      };
     config.element = 'line-chart';
     if (morrisChart == null) {
         morrisChart = Morris.Line(config);   
     } else {
-        morrisChart.setData(config.data);   
+        //morrisChart.setData(config.data);   
+        $('#line-chart').empty();
+        morrisChart = Morris.Line(config);   
     }
 }
