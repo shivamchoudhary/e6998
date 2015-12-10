@@ -8,6 +8,9 @@ $( document ).ready(function() {
   };
   xhttp.open("GET", "/index/prob/", true);
   xhttp.send();
+  $('#allChart').click(function () {
+      loadDoc(-1);
+  });
 });
 
 function updateChartMenu(data) {
@@ -23,7 +26,9 @@ function updateChartMenu(data) {
         $("#prob_menu ul").append(current_string);
         $('#prob_menu li').click(function(e) 
         { 
-            loadDoc(this.id);
+            if (this.id != "allChart") {
+                loadDoc(this.id);
+            }
         });
     }
 }
@@ -94,13 +99,14 @@ var morrisChart = null;
 function updateChart(chart_data) {
     var number_data = chart_data.chartInfo;
     var prob_data = chart_data.currentProb;
+    var ykeys_data = chart_data.ykey_data;
     console.log(number_data);
     console.log(prob_data);
     config = {
       data: number_data,
       xkey: 'y',
-      ykeys: ['prob' + prob_data.toString()],
-      labels: ['Detected Success Rate'],
+      ykeys: ykeys_data,
+      labels: ykeys_data, 
       fillOpacity: 0.6,
       hideHover: 'auto',
       behaveLikeLine: true,
@@ -109,7 +115,7 @@ function updateChart(chart_data) {
       resize: true,
       pointFillColors:['#ffffff'],
       pointStrokeColors: ['black'],
-      lineColors:['gray','red'],
+      lineColors:['gray','red', 'green', 'yellow','orange', 'black', 'purple'],
       goals:[prob_data * 100]
      };
     config.element = 'line-chart';

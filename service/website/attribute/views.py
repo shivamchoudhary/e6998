@@ -56,25 +56,41 @@ def chart(request):
     json_data = json.loads(request.body)
     response_data = {}
     response_data['message'] = 'ajax message'
-    current_prob = json_data['request_prob'] 
-    pvals = experiment_detect.pvals(current_prob)
-    #num_experiment = pvals.num_experiment()
-    experiment_prob = pvals.run_exp()
-    ordered_prob =  OrderedDict(sorted(experiment_prob.items(), key=lambda x:int(x[0])))
-    print ordered_prob
+    prob_flag = json_data['request_prob'] 
+    prob_array = []
+    if prob_flag == -1:
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        BASE_DIR = os.path.join(BASE_DIR,"attribute/pvalues/")
+        prob_array += [each.split("prob")[1] for each in os.listdir(BASE_DIR)]
+    else:
+        prob_array += [prob_flag]
+    print prob_array
+
     number_data = []
-    for k, v in ordered_prob.iteritems():
-        current_data = {}
-        current_data['y'] = k
-        current_data['prob' + str(current_prob)] = v
-        number_data.append(current_data)
+    prob_ykeys = []
+    for current_prob in prob_array:
+        prob_ykeys += ['prob' + current_prob]
+        pvals = experiment_detect.pvals(current_prob)
+        #num_experiment = pvals.num_experiment()
+        experiment_prob = pvals.run_exp()
+        ordered_prob = OrderedDict(sorted(experiment_prob.items(), key=lambda x:int(x[0])))
+        #print ordered_prob
+        #number_data = []
+        for k, v in ordered_prob.iteritems():
+            current_data = {}
+            current_data['y'] = k
+            current_data['prob' + str(current_prob)] = v
+            number_data.append(current_data)
+    #number_data = number_data.sort(key=lambda x:int(x['y']))
+    number_data = sorted(number_data, key=lambda x:int(x['y']))
+    print prob_ykeys
     """ morris chart data format
     number_data = [{'y': '0.9', 's': 1}]
             #,{'y':'0.6', 'a':90, 'b':90}]
     """
     response_data['chartInfo'] = number_data
     response_data['currentProb'] = current_prob
-    print response_data['currentProb']
+    response_data['ykey_data'] = prob_ykeys
     return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 def tokenize(query_params):
