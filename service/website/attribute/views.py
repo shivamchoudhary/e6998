@@ -66,14 +66,15 @@ def chart(request):
     for k, v in ordered_prob.iteritems():
         current_data = {}
         current_data['y'] = k
-        current_data['s'] = v
+        current_data['prob' + str(current_prob)] = v
         number_data.append(current_data)
     """ morris chart data format
     number_data = [{'y': '0.9', 's': 1}]
             #,{'y':'0.6', 'a':90, 'b':90}]
     """
     response_data['chartInfo'] = number_data
-    response_data['currentProb'] = float(current_prob) * 100
+    response_data['currentProb'] = current_prob
+    print response_data['currentProb']
     return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 def tokenize(query_params):

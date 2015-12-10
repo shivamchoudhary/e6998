@@ -1,0 +1,811 @@
+{
+    "0": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "1": {
+        "element": " Default ."
+    },
+    "2": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "3": {
+        "element": " Default ."
+    },
+    "4": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "5": {
+        "element": " Default ."
+    },
+    "6": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "7": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "8": {
+        "element": " Default ."
+    },
+    "9": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "10": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "11": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "12": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "13": {
+        "element": " Default ."
+    },
+    "14": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "15": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "16": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "17": {
+        "element": " Default ."
+    },
+    "18": {
+        "element": " Default ."
+    },
+    "19": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "20": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "21": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "22": {
+        "element": " Default ."
+    },
+    "23": {
+        "element": " Default ."
+    },
+    "24": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "25": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "26": {
+        "element": " Default ."
+    },
+    "27": {
+        "element": " Default ."
+    },
+    "28": {
+        "element": " Default ."
+    },
+    "29": {
+        "element": " Default ."
+    },
+    "30": {
+        "element": " Default ."
+    },
+    "31": {
+        "element": " Default ."
+    },
+    "32": {
+        "element": " Default ."
+    },
+    "33": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "34": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "35": {
+        "element": " Default ."
+    },
+    "36": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "37": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "38": {
+        "element": " Default ."
+    },
+    "39": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "40": {
+        "element": " Default ."
+    },
+    "41": {
+        "element": " Default ."
+    },
+    "42": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "43": {
+        "element": " Default ."
+    },
+    "44": {
+        "element": " Default ."
+    },
+    "45": {
+        "element": " Default ."
+    },
+    "46": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "47": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "48": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "49": {
+        "element": " Default ."
+    },
+    "50": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "51": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "52": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "53": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "54": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "55": {
+        "element": " Default ."
+    },
+    "56": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "57": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "58": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "59": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "60": {
+        "element": " Default ."
+    },
+    "61": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "62": {
+        "element": " Default ."
+    },
+    "63": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "64": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "65": {
+        "element": " Default ."
+    },
+    "66": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "67": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "68": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "69": {
+        "element": " Default ."
+    },
+    "70": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "71": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "72": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "73": {
+        "element": " Default ."
+    },
+    "74": {
+        "element": " Default ."
+    },
+    "75": {
+        "element": " Default ."
+    },
+    "76": {
+        "element": " Default ."
+    },
+    "77": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "78": {
+        "element": " Default ."
+    },
+    "79": {
+        "element": " Default ."
+    },
+    "80": {
+        "element": " Default ."
+    },
+    "81": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "82": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "83": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "84": {
+        "element": " Default ."
+    },
+    "85": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "86": {
+        "element": " Default ."
+    },
+    "87": {
+        "element": " Default ."
+    },
+    "88": {
+        "element": " Default ."
+    },
+    "89": {
+        "element": " Default ."
+    },
+    "90": {
+        "element": " Default ."
+    },
+    "91": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "92": {
+        "element": " Default ."
+    },
+    "93": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "94": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "95": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "96": {
+        "element": " Default ."
+    },
+    "97": {
+        "element": " Default ."
+    },
+    "98": {
+        "element": " Default ."
+    },
+    "99": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "100": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "101": {
+        "element": " Default ."
+    },
+    "102": {
+        "element": " Default ."
+    },
+    "103": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "104": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "105": {
+        "element": " Default ."
+    },
+    "106": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "107": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "108": {
+        "element": " Default ."
+    },
+    "109": {
+        "element": " Default ."
+    },
+    "110": {
+        "element": " Default ."
+    },
+    "111": {
+        "element": " Default ."
+    },
+    "112": {
+        "element": " Default ."
+    },
+    "113": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "114": {
+        "element": " Default ."
+    },
+    "115": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "116": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "117": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "118": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "119": {
+        "element": " Default ."
+    },
+    "120": {
+        "element": " Default ."
+    },
+    "121": {
+        "element": " Default ."
+    },
+    "122": {
+        "element": " Default ."
+    },
+    "123": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "124": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "125": {
+        "element": " Default ."
+    },
+    "126": {
+        "element": " Default ."
+    },
+    "127": {
+        "element": " Default ."
+    },
+    "128": {
+        "element": " Default ."
+    },
+    "129": {
+        "element": " Default ."
+    },
+    "130": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "131": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "132": {
+        "element": " Default ."
+    },
+    "133": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "134": {
+        "element": " Default ."
+    },
+    "135": {
+        "element": " Default ."
+    },
+    "136": {
+        "element": " Default ."
+    },
+    "137": {
+        "element": " Default ."
+    },
+    "138": {
+        "element": " Default ."
+    },
+    "139": {
+        "element": " Default ."
+    },
+    "140": {
+        "element": " Default ."
+    },
+    "141": {
+        "element": " Default ."
+    },
+    "142": {
+        "element": " Default ."
+    },
+    "143": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "144": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "145": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "146": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "147": {
+        "element": " Default ."
+    },
+    "148": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "149": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "150": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "151": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "152": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "153": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "154": {
+        "element": " Default ."
+    },
+    "155": {
+        "element": " Default ."
+    },
+    "156": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "157": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "158": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "159": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "160": {
+        "element": " Default ."
+    },
+    "161": {
+        "element": " Default ."
+    },
+    "162": {
+        "element": " Default ."
+    },
+    "163": {
+        "element": " Default ."
+    },
+    "164": {
+        "element": " Default ."
+    },
+    "165": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "166": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "167": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "168": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "169": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "170": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "171": {
+        "element": " Default ."
+    },
+    "172": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "173": {
+        "element": " Default ."
+    },
+    "174": {
+        "element": " Default ."
+    },
+    "175": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "176": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "177": {
+        "element": " Default ."
+    },
+    "178": {
+        "element": " Default ."
+    },
+    "179": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "180": {
+        "element": " Default ."
+    },
+    "181": {
+        "element": " Default ."
+    },
+    "182": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "183": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "184": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "185": {
+        "element": " Default ."
+    },
+    "186": {
+        "element": " Default ."
+    },
+    "187": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "188": {
+        "element": " Default ."
+    },
+    "189": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "190": {
+        "element": " Default ."
+    },
+    "191": {
+        "element": " Default ."
+    },
+    "192": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "193": {
+        "element": " Default ."
+    },
+    "194": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "195": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "196": {
+        "element": " Default ."
+    },
+    "197": {
+        "element": " Default ."
+    },
+    "198": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "199": {
+        "geo": "geo_india",
+        "element": "  .",
+        "pvalues": 0.4598151130590674
+    },
+    "detected_counter": 0,
+    "percentdetected": 0.0,
+    "total input": 200
+}
