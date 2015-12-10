@@ -2,20 +2,22 @@ import json
 import os
 import Common
 class pvals(object):
-    def __init__(self):
+    def __init__(self,current_prob):
         filelist= []
+        foldername = "prob" + str(current_prob)
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        BASE_DIR = os.path.join(BASE_DIR,"attribute/pvalues/")
+        BASE_DIR = os.path.join(BASE_DIR,"attribute/pvalues/" + foldername)
+        self.base_dir = BASE_DIR
         filelist += [each for each in os.listdir(BASE_DIR) if each.endswith('.json')]
         self.filelist = filelist
         self.prob = {}
-        self.threshold_detection  = 10^-3
+        self.threshold_detection  = 0.001 
         self.run_exp()
     def run_exp(self):
         for files in self.filelist:
             pvals = self.load_pvals(files)
-            probability = str(files.split(".json")[0].split("prob_")[1])
-            self.prob[probability] = str(self.num_success(pvals))
+            iterations = str(files.split(".json")[0].split("pvalues_")[1])
+            self.prob[iterations] = str(pvals["percentdetected"])
         return self.prob
     def num_experiment(self,pvals):
         return len(pvals.keys())
@@ -28,7 +30,7 @@ class pvals(object):
     def load_pvals(self,fname):
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         BASE_DIR = os.path.join(BASE_DIR,"attribute/pvalues/") 
-        with open(BASE_DIR + fname) as pvalf:
+        with open(self.base_dir + "/" + fname) as pvalf:
             pvals = json.load(pvalf)
         return pvals
 
