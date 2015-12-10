@@ -10,15 +10,22 @@ body {
 
 #page-wrapper {
     width: 100%;
+    height: 100%;
     padding: 0;
     background-color: #fff;
 }
 
+.fullrow {
+    height: 450px;
+}
 .huge {
     font-size: 50px;
     line-height: normal;
 }
 
+svg{
+    width:100%;
+}
 /* Top Navigation */
 
 .top-nav {

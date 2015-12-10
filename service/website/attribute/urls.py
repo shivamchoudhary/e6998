@@ -9,5 +9,6 @@ urlpatterns = [
         url(r'^test/$',views.test,name='test'),
         url(r'^configure/$',views.configure,name='configure'),
         url(r'^chart/$',views.chart,name='chart'),
+        url(r'^prob/$',views.probability,name='probability'),
         ]
 urlpatterns += staticfiles_urlpatterns()

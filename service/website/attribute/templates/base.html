@@ -77,7 +77,7 @@
                 </div>
                 
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="form-group" id="inputForms">
                             <label for="country">Country:</label>
                             <input type="text" class="form-control" id="country" value="germany"></input>
@@ -88,20 +88,30 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading col-lg-12">
                                 <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Chart</h3>
                             </div>
-                           <div class="pane-body">
-                                <div id="line-chart"></div>
+                           <div class="fullrow">
+                               <div id="line-chart" style="height:400px;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                 <div class="col-lg-6">
+                 <div class="col-lg-12" id="prob_menu">
+                    <ul class="nav nav-pills nav-justified">
+                        <!--
+                        <li class="active"><a href="#"></a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                        -->
+                    </ul>
+                    <!--
                     <button type="button" class="btn btn-primary" onclick="loadDoc()">Update Chart</button>
                     <button type="button" class="btn btn-success">Run Test</button>
+                    -->
                 </div>
                 <!-- /.row -->
             </div>
