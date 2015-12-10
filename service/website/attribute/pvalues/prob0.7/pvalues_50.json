@@ -1,0 +1,223 @@
+{
+    "0": {
+        "element": " Default ."
+    },
+    "1": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "2": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "3": {
+        "element": " Default ."
+    },
+    "4": {
+        "element": " Default ."
+    },
+    "5": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "6": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "7": {
+        "element": " Default ."
+    },
+    "8": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "9": {
+        "element": " Default ."
+    },
+    "10": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "11": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "12": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "13": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "14": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "15": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "16": {
+        "element": " Default ."
+    },
+    "17": {
+        "element": " Default ."
+    },
+    "18": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "19": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "20": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "21": {
+        "element": " Default ."
+    },
+    "22": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "23": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "24": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "25": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "26": {
+        "element": " Default ."
+    },
+    "27": {
+        "element": " Default ."
+    },
+    "28": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "29": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "30": {
+        "element": " Default ."
+    },
+    "31": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "32": {
+        "element": " Default ."
+    },
+    "33": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "34": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "35": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "36": {
+        "element": " Default ."
+    },
+    "37": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "38": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "39": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "40": {
+        "element": " Default ."
+    },
+    "41": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "42": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "43": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "44": {
+        "element": " Default ."
+    },
+    "45": {
+        "element": " German .",
+        "geo": "geo_germany",
+        "pvalues": 0.08160000000000005
+    },
+    "46": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "47": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "48": {
+        "element": " Default ."
+    },
+    "49": {
+        "element": " Indian .",
+        "geo": "geo_india",
+        "pvalues": 0.3067815204456233
+    },
+    "percentdetected": 0.0,
+    "total input": 50,
+    "detected_counter": 0
+}

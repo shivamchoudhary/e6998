@@ -1,3 +1,33 @@
+$( document ).ready(function() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+        var data = JSON.parse(xhttp.responseText);
+        updateChartMenu(data);
+    }
+  };
+  xhttp.open("GET", "/index/prob/", true);
+  xhttp.send();
+});
+
+function updateChartMenu(data) {
+    var number_data = data.probability;
+    for (index = 0; index < number_data.length; ++index) {
+        console.log(number_data[index]);
+        var current_string = '<li id="';
+        current_string = current_string.concat(number_data[index]);
+        current_string = current_string.concat('"><a href="#">');
+        current_string = current_string.concat(number_data[index]);
+        current_string = current_string.concat('</a></li>');
+        console.log(current_string);
+        $("#prob_menu ul").append(current_string);
+        $('#prob_menu li').click(function(e) 
+        { 
+            loadDoc(this.id);
+        });
+    }
+}
+
 function QueryData(data)
 {
    var ret = [];
@@ -23,16 +53,19 @@ function readInput() {
     return dict;
 }
 
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-        var data = JSON.parse(xhttp.responseText);
-        updateChart(data);
-    }
-  };
-  xhttp.open("GET", "/index/chart/", true);
-  xhttp.send();
+function loadDoc(data) {
+    var configuration = {};
+    configuration["request_prob"] = data;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var data = JSON.parse(xhttp.responseText);
+            updateChart(data);
+        }
+    };
+    xhttp.open("POST", "/index/chart/", true);
+    console.log(JSON.stringify(configuration));
+    xhttp.send(JSON.stringify(configuration));
 }
 
 function updateConfiguration() {
@@ -71,8 +104,9 @@ function updateChart(chart_data) {
       fillOpacity: 0.6,
       hideHover: 'auto',
       behaveLikeLine: true,
-      resize: true,
       parseTime: false,
+      redraw: true,
+      resize: true,
       pointFillColors:['#ffffff'],
       pointStrokeColors: ['black'],
       lineColors:['gray','red'],
@@ -82,6 +116,6 @@ function updateChart(chart_data) {
     if (morrisChart == null) {
         morrisChart = Morris.Line(config);   
     } else {
-        morrisChat.setData(config);
+        morrisChart.setData(config.data);   
     }
 }

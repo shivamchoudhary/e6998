@@ -11,6 +11,7 @@ import Common
 from collections import OrderedDict
 import random
 import json
+import os
 import experiment_detect
 import openwpm_wrapper
 
@@ -42,10 +43,21 @@ def configure(request):
         openwpm_wrapper.startExperiment(json_data['openwpm_dir'], json_data['num_browers'], json_data['iterations'], json_data['sites'])
         return HttpResponse("Successfully received!") 
 
+def probability(request):
+    response_data = {}
+    number_data = []
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    BASE_DIR = os.path.join(BASE_DIR,"attribute/pvalues/")
+    number_data += [each.split("prob")[1] for each in os.listdir(BASE_DIR)]
+    response_data['probability'] = number_data
+    return HttpResponse(json.dumps(response_data), content_type="application/json")
+
+@csrf_exempt
 def chart(request):
+    json_data = json.loads(request.body)
     response_data = {}
     response_data['message'] = 'ajax message'
-    current_prob = 0.9
+    current_prob = json_data['request_prob'] 
     pvals = experiment_detect.pvals(current_prob)
     #num_experiment = pvals.num_experiment()
     experiment_prob = pvals.run_exp()
@@ -61,10 +73,8 @@ def chart(request):
     number_data = [{'y': '0.9', 's': 1}]
             #,{'y':'0.6', 'a':90, 'b':90}]
     """
-    print number_data
     response_data['chartInfo'] = number_data
-    response_data['currentProb'] = current_prob*100
-    print response_data
+    response_data['currentProb'] = float(current_prob) * 100
     return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 def tokenize(query_params):
