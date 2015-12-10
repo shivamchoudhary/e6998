@@ -24,7 +24,6 @@ def test(request):
     base = make_dom(dict)
     t = loader.get_template('test.html')
     c = Context(base)
-    print render_to_response('test.html', context = c)
     return render_to_response('test.html', context = c)
 
 @csrf_exempt
@@ -100,6 +99,5 @@ def make_dom(dict):
                 if (p<sumK):
                     attr_dict[k] = val1
                     break
-    print attr_dict
     return attr_dict
 
