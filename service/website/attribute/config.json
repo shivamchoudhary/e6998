@@ -1,21 +1,4 @@
         {
-        "gender":{
-            "male":{
-                "0.7":"Male",
-                "0.3":"Default"
-                },
-            "female":
-                    {
-                "0.4":"Female",
-                "0.6":"Default"
-                }
-            },
-        "race":{
-            "caucasian":{
-                "0.8":"Caucasian",
-                "0.2":"Default"
-                }
-            },
         "country":{
             "germany":{
                 "0.9":"German",
@@ -24,12 +7,6 @@
             "india":{
                 "0.9":"Indian",
                 "0.1":"Default"
-                }
-            },
-        "people":{
-            "me":{
-                "0.5":"<img src="/index/static/wenyu.jpg"/>"
-                "0.5":"<a href=/index/index/>Go Back to Dashboard</a>"
                 }
             }
         }
