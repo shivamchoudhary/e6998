@@ -60,12 +60,14 @@ var morrisChart = null;
 
 function updateChart(chart_data) {
     var number_data = chart_data.chartInfo;
+    var prob_data = chart_data.currentProb;
     console.log(number_data);
+    console.log(prob_data);
     config = {
       data: number_data,
       xkey: 'y',
       ykeys: ['s'],
-      labels: ['Detected P'],
+      labels: ['Detected Success Rate'],
       fillOpacity: 0.6,
       hideHover: 'auto',
       behaveLikeLine: true,
@@ -73,7 +75,8 @@ function updateChart(chart_data) {
       parseTime: false,
       pointFillColors:['#ffffff'],
       pointStrokeColors: ['black'],
-      lineColors:['gray','red']
+      lineColors:['gray','red'],
+      goals:[prob_data]
      };
     config.element = 'line-chart';
     if (morrisChart == null) {

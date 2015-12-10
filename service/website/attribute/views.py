@@ -23,6 +23,7 @@ def test(request):
     base = make_dom(dict)
     t = loader.get_template('test.html')
     c = Context(base)
+    print render_to_response('test.html', context = c)
     return render_to_response('test.html', context = c)
 
 @csrf_exempt
@@ -44,10 +45,12 @@ def configure(request):
 def chart(request):
     response_data = {}
     response_data['message'] = 'ajax message'
-    pvals = experiment_detect.pvals()
+    current_prob = 0.9
+    pvals = experiment_detect.pvals(current_prob)
     #num_experiment = pvals.num_experiment()
     experiment_prob = pvals.run_exp()
-    ordered_prob =  OrderedDict(sorted(experiment_prob.items()))
+    ordered_prob =  OrderedDict(sorted(experiment_prob.items(), key=lambda x:int(x[0])))
+    print ordered_prob
     number_data = []
     for k, v in ordered_prob.iteritems():
         current_data = {}
@@ -58,8 +61,10 @@ def chart(request):
     number_data = [{'y': '0.9', 's': 1}]
             #,{'y':'0.6', 'a':90, 'b':90}]
     """
-    #print number_data
+    print number_data
     response_data['chartInfo'] = number_data
+    response_data['currentProb'] = current_prob*100
+    print response_data
     return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 def tokenize(query_params):
@@ -85,5 +90,6 @@ def make_dom(dict):
                 if (p<sumK):
                     attr_dict[k] = val1
                     break
+    print attr_dict
     return attr_dict
 
