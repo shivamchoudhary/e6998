@@ -1,8 +1,8 @@
 {
-    "Default": 10.0, 
     "German": 90.0, 
-    "Indian": 90.0, 
-    "Static": 30.0, 
-    "Female": 70.0, 
-    "Male": 90.0
+    "Default": 10.0, 
+    "Indian": 100.0, 
+    "Static": 10.0, 
+    "Female": 90.0, 
+    "Male": 100.0
 }
