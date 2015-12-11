@@ -111,6 +111,7 @@ function updateChart(chart_data) {
     var ykeys_data = chart_data.ykey_data;
     console.log(number_data);
     console.log(prob_data);
+    
     config = {
       data: number_data,
       xkey: 'y',
@@ -119,34 +120,25 @@ function updateChart(chart_data) {
       fillOpacity: 0.6,
       hideHover: 'auto',
       behaveLikeLine: true,
-      parseTime: false,
       redraw: true,
+      parseTime: false,
       resize: true,
       pointFillColors:['#ffffff'],
       pointStrokeColors: ['black'],
       lineColors:['gray','red', 'green', 'black','orange', 'cyan', 'purple'],
      };
-    /*
+    
+    /* 
     var data = [
-      { y: '2014', a: 50},
-      {y:'2014',b: 90},
-      { y: '2015', a: 65,  b: 75},
-      { y: '2016', a: 50,  b: 50},
-      { y: '2017', a: 75,  b: 60},
-      { y: '2018', a: 80,  b: 65},
-      { y: '2019', a: 90,  b: 70},
-      { y: '2020', a: 100, b: 75},
-      { y: '2021', a: 115, b: 75},
-      { y: '2022', a: 120, b: 85},
-      { y: '2023', a: 145, b: 85},
-      { y: '2024', a: 160, b: 95}
+      { y: '200', a: 50},
+      {y:'200', b: 90},
     ];
     console.log(data);
     config = {
       data: data,
       xkey: 'y',
       ykeys: ['a', 'b'],
-      labels: ['Total Income', 'Total Outcome'],
+      labels: ['a','b'],
     };
     */
     config.element = 'line-chart-dryrun';

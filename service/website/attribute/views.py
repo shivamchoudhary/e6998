@@ -115,10 +115,18 @@ def chart(request):
         #print ordered_prob
         #number_data = []
         for k, v in ordered_prob.iteritems():
-            current_data = {}
-            current_data['y'] = k
-            current_data['prob' + str(current_prob)] = v
-            number_data.append(current_data)
+            found = 0
+            for ele in number_data:
+                if ele['y'] == k:
+                    existing_data = ele
+                    found = 1
+            if found == 0:
+                current_data = {}
+                current_data['y'] = k
+                current_data['prob' + str(current_prob)] = v
+                number_data.append(current_data)
+            else:
+                existing_data['prob' + str(current_prob)] = v
     #number_data = number_data.sort(key=lambda x:int(x['y']))
     number_data = sorted(number_data, key=lambda x:int(x['y']))
     print prob_ykeys
@@ -158,16 +166,22 @@ def multichart(request):
         #print ordered_prob
         #number_data = []
         for k, v in ordered_prob.iteritems():
+            found = 0 
             for ele, elev in v.iteritems():
                 #print ele, elev
                 if not ( 'prob' + str(current_prob) + ele in prob_ykeys):
                     prob_ykeys.append('prob' + str(current_prob) + ele)
-                current_data = {}
-                current_data['y'] = k
-                current_data['prob' + str(current_prob) + ele] = elev
-                #print current_data
-                number_data.append(current_data)
-    #number_data = number_data.sort(key=lambda x:int(x['y']))
+                if found == 0:
+                    current_data = {}
+                    current_data['y'] = k
+                    current_data['prob' + str(current_prob) + ele] = elev
+                    #print current_data
+                    number_data.append(current_data)
+                    found = 1
+                    existing_data = current_data
+                else:
+                    existing_data['prob' + str(current_prob) + ele] = elev 
+   #number_data = number_data.sort(key=lambda x:int(x['y']))
     print number_data
     number_data = sorted(number_data, key=lambda x:int(x['y']))
     #print prob_ykeys
@@ -207,17 +221,23 @@ def dryrunchart(request):
         #print ordered_prob
         #number_data = []
         for k, v in ordered_prob.iteritems():
+            found = 0 
             for ele, elev in v.iteritems():
                 #print ele, elev
                 if not ( 'prob' + str(current_prob) + ele in prob_ykeys):
                     prob_ykeys.append('prob' + str(current_prob) + ele)
-                current_data = {}
-                current_data['y'] = k
-                current_data['prob' + str(current_prob) + ele] = elev
-                #print current_data
-                number_data.append(current_data)
+                if found == 0:
+                    current_data = {}
+                    current_data['y'] = k
+                    current_data['prob' + str(current_prob) + ele] = elev
+                    #print current_data
+                    number_data.append(current_data)
+                    found = 1
+                    existing_data = current_data
+                else:
+                    existing_data['prob' + str(current_prob) + ele] = elev 
     #number_data = number_data.sort(key=lambda x:int(x['y']))
-    print number_data
+    print number_data 
     number_data = sorted(number_data, key=lambda x:int(x['y']))
     #print prob_ykeys
     """ morris chart data format
