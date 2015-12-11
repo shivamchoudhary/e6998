@@ -29,6 +29,7 @@ function updateChartMenu(data) {
             if (this.id != "allChart") {
                 loadDoc(this.id);
             }
+            document.getElementById('configAdjust').innerHTML="aaa";
         });
     }
 }
@@ -117,6 +118,29 @@ function updateChart(chart_data) {
       pointStrokeColors: ['black'],
       lineColors:['gray','red', 'green', 'yellow','orange', 'black', 'purple'],
      };
+    /*
+    var data = [
+      { y: '2014', a: 50},
+      {y:'2014',b: 90},
+      { y: '2015', a: 65,  b: 75},
+      { y: '2016', a: 50,  b: 50},
+      { y: '2017', a: 75,  b: 60},
+      { y: '2018', a: 80,  b: 65},
+      { y: '2019', a: 90,  b: 70},
+      { y: '2020', a: 100, b: 75},
+      { y: '2021', a: 115, b: 75},
+      { y: '2022', a: 120, b: 85},
+      { y: '2023', a: 145, b: 85},
+      { y: '2024', a: 160, b: 95}
+    ];
+    console.log(data);
+    config = {
+      data: data,
+      xkey: 'y',
+      ykeys: ['a', 'b'],
+      labels: ['Total Income', 'Total Outcome'],
+    };
+    */
     config.element = 'line-chart-multielements';
     if (morrisChart == null) {
         morrisChart = Morris.Line(config);   

@@ -141,13 +141,13 @@ def multichart(request):
                     prob_ykeys.append('prob' + str(current_prob) + ele)
                 current_data = {}
                 current_data['y'] = k
-                current_data['prob' + str(current_prob) + ele] = str(elev)
-                print current_data
+                current_data['prob' + str(current_prob) + ele] = elev
+                #print current_data
                 number_data.append(current_data)
     #number_data = number_data.sort(key=lambda x:int(x['y']))
     print number_data
     number_data = sorted(number_data, key=lambda x:int(x['y']))
-    print prob_ykeys
+    #print prob_ykeys
     """ morris chart data format
     number_data = [{'y': '0.9', 's': 1}]
             #,{'y':'0.6', 'a':90, 'b':90}]
