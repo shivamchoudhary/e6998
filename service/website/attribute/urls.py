@@ -13,5 +13,6 @@ urlpatterns = [
         url(r'^multichart/$',views.multichart,name='multichart'),
         url(r'^prob/$',views.probability,name='probability'),
         url(r'^multiprob/$',views.multiprobability,name='multiprobability'),
+        url(r'^visualization/(?P<path>.*)$',views.visualization,name='visualization'),
         ]
 urlpatterns += staticfiles_urlpatterns()

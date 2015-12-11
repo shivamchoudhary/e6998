@@ -29,7 +29,15 @@ function updateChartMenu(data) {
             if (this.id != "allChart") {
                 loadDoc(this.id);
             }
-            document.getElementById('configAdjust').innerHTML="aaa";
+            function populatePre(url) {
+                var xhr = new XMLHttpRequest();
+                xhr.onload = function () {
+                    document.getElementById('configAdjust').textContent = this.responseText;
+            };
+            xhr.open('GET', url);
+            xhr.send();
+            }
+            populatePre('/index/static/config/condition'+this.id+'/config.json');
         });
     }
 }
