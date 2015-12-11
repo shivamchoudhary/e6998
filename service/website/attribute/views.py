@@ -19,8 +19,14 @@ import openwpm_wrapper
 def index(request):
     return render_to_response('base.html')
 
+def dryrun(request):
+    return render_to_response('dryrun.html')
+
 def test(request):
     query_params = request.META['QUERY_STRING']
+    print query_params
+    if query_params == '':
+        return render_to_response('testConfig.html')
     dict = tokenize(query_params)
     base = make_dom(dict)
     t = loader.get_template('test.html')
@@ -30,6 +36,13 @@ def test(request):
 def multielements(request):
     return render_to_response('multielements.html')
 
+def visualization(request,path):
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    visualization_filename = os.path.join(BASE_DIR,"attribute/result/localhost/" + path)
+    if path =="":
+        return render_to_response("Visualization.html")
+    else:
+        return render_to_response(visualization_filename)
 
 @csrf_exempt
 def configure(request):

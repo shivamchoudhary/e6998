@@ -29,7 +29,15 @@ function updateChartMenu(data) {
             if (this.id != "allChart") {
                 loadDoc(this.id);
             }
-            document.getElementById('configAdjust').innerHTML="aaa";
+            function populatePre(url) {
+                var xhr = new XMLHttpRequest();
+                xhr.onload = function () {
+                    document.getElementById('configAdjust').textContent = this.responseText;
+            };
+            xhr.open('GET', url);
+            xhr.send();
+            }
+            populatePre('/index/static/config/condition'+this.id+'/config.json');
         });
     }
 }
@@ -116,7 +124,7 @@ function updateChart(chart_data) {
       resize: true,
       pointFillColors:['#ffffff'],
       pointStrokeColors: ['black'],
-      lineColors:['gray','red', 'green', 'yellow','orange', 'black', 'purple'],
+      lineColors:['gray','red', 'green', 'black','orange', 'cyan', 'purple'],
      };
     /*
     var data = [

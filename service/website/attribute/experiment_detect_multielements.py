@@ -9,7 +9,9 @@ class pvals(object):
         BASE_DIR = os.path.join(BASE_DIR,"attribute/multipvalues/" + foldername)
         self.base_dir = BASE_DIR
         filelist += [each for each in os.listdir(BASE_DIR) if each.endswith('.json')]
+        filelist.remove('config.json')
         self.filelist = filelist
+        print filelist
         self.prob = {}
         self.threshold_detection  = 0.001 
         self.run_exp()
