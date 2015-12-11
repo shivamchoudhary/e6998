@@ -4,7 +4,7 @@ import Common
 class pvals(object):
     def __init__(self,current_prob):
         filelist= []
-        foldername = "prob" + str(current_prob)
+        foldername = "condition" + str(current_prob)
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         BASE_DIR = os.path.join(BASE_DIR,"attribute/multipvalues/" + foldername)
         self.base_dir = BASE_DIR

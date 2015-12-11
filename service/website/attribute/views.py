@@ -61,7 +61,7 @@ def multiprobability(request):
     number_data = []
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     BASE_DIR = os.path.join(BASE_DIR,"attribute/multipvalues/")
-    number_data += [each.split("prob")[1] for each in os.listdir(BASE_DIR)]
+    number_data += [each.split("condition")[1] for each in os.listdir(BASE_DIR)]
     response_data['probability'] = number_data
     return HttpResponse(json.dumps(response_data), content_type="application/json")
 
