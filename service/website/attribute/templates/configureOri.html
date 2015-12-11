@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Data Observatory Configuration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../static/js/base.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>config.json</h2>
+    <p>Please input the configuration json below:</p>
+    <form role="form">
+        <div class="form-group">
+          <label for="config_json">config.json:</label>
+          <textarea class="form-control" rows="25" id="config_json">
+        {
+        "country":{
+            "germany":{
+                "0.9":"German",
+                "0.1":"Default"
+                },
+            "india":{
+                "0.9":"Indian",
+                "0.1":"Default"
+                }
+            }
+        }
+        </textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="config_sites">site_links:</label>
+            <textarea class="form-control" rows="3" id="config_sites">
+                http://localhost:8000/index/test/?country=india&gender=male, http://localhost:8000/index/test/?country=germany&gender=male
+            </textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="openwpm_dir">OpenWPM_base_directory:</label>
+            <input type="text" class="form-control" id="openwpm_dir">
+        </div>
+
+        <div class="form-group">
+            <label for="db_dir">DataObservatory_base_directory:</label>
+            <input type="text" class="form-control" id="db_dir">
+        </div>
+
+    
+        <div class="form-group">
+            <label for="iter">iterations:</label>
+            <input type="text" class="form-control" id="iter" value="1">
+        </div>
+        
+        <div class="form-group">
+            <label for="num_browser">number_browsers</label>
+            <input type="text" class="form-control" id="num_browser" value="1">
+        </div>
+
+        <div class="form-group">
+            <label for="file_name">file_name</label>
+            <input type="text" class="form-control" id="file_name" value="prob_0.1">
+        </div>
+
+
+    </form>
+        
+    <div class="row">
+        <div class="col-lg-12 col-lg-offset-0">
+            <button type="button" class="btn btn-primary" onclick="updateConfiguration()">Configure</button>
+            <button type="button" onclick="location.href = '/index/index';" id="myButton" class="btn btn-primary" >Return to Dashboard</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
