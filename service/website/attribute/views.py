@@ -21,6 +21,9 @@ def index(request):
 
 def test(request):
     query_params = request.META['QUERY_STRING']
+    print query_params
+    if query_params == '':
+        return render_to_response('testConfig.html')
     dict = tokenize(query_params)
     base = make_dom(dict)
     t = loader.get_template('test.html')
