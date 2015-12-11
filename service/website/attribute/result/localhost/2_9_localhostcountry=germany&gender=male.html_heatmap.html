@@ -1,0 +1,172 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head data-dataobservatory-cache-level="2">
+  <style>
+   .data-observatory-heatmap-div {
+    position:relative;
+    padding: 2px 4px;
+    margin: 1px;
+    border-radius: 3px;
+    display:inline-block;
+}
+  </style>
+  <style>
+   .data-observatory-label {
+    display: none;
+    position:absolute;
+    z-index: 1070;
+    top:-50%;
+    left:-20%;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 14px;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+  </style>
+  <style>
+   .data-observatory-tooltip-container:hover .data-observatory-tooltip {
+    opacity: 100;
+    display: block!important;
+}
+
+.data-observatory-heatmap-div:hover {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.data-observatory-tooltip-container {
+    position: relative;
+}
+
+.data-observatory-tooltip {
+    position: absolute;
+    z-index: 1070;
+    display: none!important;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.data-observatory-tooltip-inner {
+    min-width: 140px!important;
+    display: block!important;
+    padding: 3px 8px!important;
+    color: #fff!important;
+    text-align: left!important;
+    background-color: #000!important;
+    border-radius: 4px!important;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif!important;
+    font-size: 12px!important;
+    font-style: normal!important;
+    font-weight: normal!important;
+    line-height: 1.42857143;
+    text-align: left!important;
+    text-align: start!important;
+    text-decoration: none!important;
+    text-shadow: none!important;
+    text-transform: none!important;
+    letter-spacing: normal!important;
+    word-break: normal!important;
+    word-spacing: normal!important;
+    word-wrap: normal;
+    white-space: normal;
+    line-break: auto;
+
+}
+.data-observatory-tooltip.data-observatory-bottom {
+    padding: 5px 0;
+    margin-top: 5px;
+}
+.data-observatory-tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+.data-observatory-tooltip.data-observatory-bottom .data-observatory-tooltip-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 0 10px 10px;
+    border-bottom-color: #000;
+}
+  </style>
+  <title>
+   Data Observertory Test Page
+  </title>
+ </head>
+ <body>
+  <h1 data-dataobservatory-position='{"width":1350,"height":39,"top":8,"left":8,"bottom":47,"right":1358}'>
+   Data Observatory Test Page
+  </h1>
+  <h1 data-dataobservatory-position='{"width":1350,"height":39,"top":68.43333435058594,"left":8,"bottom":107.43333435058594,"right":1358}'>
+   <a data-dataobservatory-position='{"width":399,"height":39,"top":68.43333435058594,"left":8,"bottom":107.43333435058594,"right":407}' href="/index/index/">
+    Go Back to Dashboard
+   </a>
+  </h1>
+  <p data-dataobservatory-position='{"width":1350,"height":19,"top":128.86666870117188,"left":8,"bottom":147.86666870117188,"right":1358}'>
+   My country is
+  </p>
+  <p data-dataobservatory-position='{"width":1350,"height":19,"top":163.86666870117188,"left":8,"bottom":182.86666870117188,"right":1358}'>
+   <span data-dataobservatory-coefs='{"geo_germany": {"coef": 2.00950118328846}}' data-dataobservatory-correct-pvalues='{"geo_germany": 0.022174198597158863}' data-dataobservatory-diff="str_diff" data-dataobservatory-freq-stats='{"test_total": 60, "test_in": 42, "train_total": 140, "train_in": 103}' data-dataobservatory-pvalues='{"geo_germany": 0.012095017416632109}'>
+    <span class="data-observatory-tooltip-container">
+     <label class="data-observatory-label" for="heatmap_div_0" style="background-color:rgba(185,74,72,0.9)">
+      geo_germany: 2.22e-02
+     </label>
+     <div class="data-observatory-heatmap-div" id="heatmap_div_0" style="background-color:rgba(255,255,255,0.9); min-width: 0px; ">
+      Default
+     </div>
+     <div class="data-observatory-tooltip data-observatory-bottom">
+      <div class="data-observatory-tooltip-arrow">
+      </div>
+      <span class="data-observatory-tooltip-inner">
+       train: 103 / 140
+       <br/>
+       test: 42 / 60
+       <br/>
+       both: 145 / 200
+       <br/>
+       pvalue: 1.21e-02
+       <br/>
+       corrent_pvalue: 2.22e-02
+       <br/>
+       coef: 2.01e+00
+       <br/>
+      </span>
+     </div>
+    </span>
+   </span>
+  </p>
+  <p data-dataobservatory-position='{"width":1350,"height":19,"top":198.86666870117188,"left":8,"bottom":217.86666870117188,"right":1358}'>
+   <span data-dataobservatory-coefs='{"geo_germany": {"coef": 0.119628127027037}}' data-dataobservatory-correct-pvalues='{"geo_germany": 0.00010966471321926009}' data-dataobservatory-diff="str_diff" data-dataobservatory-freq-stats='{"test_total": 60, "test_in": 22, "train_total": 140, "train_in": 47}' data-dataobservatory-pvalues='{"geo_germany": 1.9939038767138198e-05}'>
+    <span class="data-observatory-tooltip-container">
+     <label class="data-observatory-label" for="heatmap_div_1" style="background-color:rgba(185,74,72,0.9)">
+      geo_germany: 1.10e-04
+     </label>
+     <div class="data-observatory-heatmap-div" id="heatmap_div_1" style="background-color:rgba(255,0,0,0.9); min-width: 0px; ">
+      Male
+     </div>
+     <div class="data-observatory-tooltip data-observatory-bottom">
+      <div class="data-observatory-tooltip-arrow">
+      </div>
+      <span class="data-observatory-tooltip-inner">
+       train: 47 / 140
+       <br/>
+       test: 22 / 60
+       <br/>
+       both: 69 / 200
+       <br/>
+       pvalue: 1.99e-05
+       <br/>
+       corrent_pvalue: 1.10e-04
+       <br/>
+       coef: 1.20e-01
+       <br/>
+      </span>
+     </div>
+    </span>
+   </span>
+  </p>
+ </body>
+</html>
