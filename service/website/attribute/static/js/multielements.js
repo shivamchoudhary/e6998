@@ -116,14 +116,13 @@ function updateChart(chart_data) {
       pointFillColors:['#ffffff'],
       pointStrokeColors: ['black'],
       lineColors:['gray','red', 'green', 'yellow','orange', 'black', 'purple'],
-      goals:[prob_data * 100]
      };
     config.element = 'line-chart-multielements';
     if (morrisChart == null) {
         morrisChart = Morris.Line(config);   
     } else {
         //morrisChart.setData(config.data);   
-        $('#line-chart').empty();
+        $('#line-chart-multielements').empty();
         morrisChart = Morris.Line(config);   
     }
 }
