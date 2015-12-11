@@ -7,6 +7,7 @@ urlpatterns = [
         #url(r'^$',views.index,name='index'),
         url(r'^index/$',views.index,name='index'),
         url(r'^test/$',views.test,name='test'),
+        url(r'^dryrun/$',views.dryrun,name='dryrun'),
         url(r'^configure/$',views.configure,name='configure'),
         url(r'^multielements/$',views.multielements,name='multielements'),
         url(r'^chart/$',views.chart,name='chart'),

@@ -19,6 +19,9 @@ import openwpm_wrapper
 def index(request):
     return render_to_response('base.html')
 
+def dryrun(request):
+    return render_to_response('dryrun.html')
+
 def test(request):
     query_params = request.META['QUERY_STRING']
     print query_params

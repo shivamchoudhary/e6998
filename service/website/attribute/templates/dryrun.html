@@ -35,7 +35,7 @@
     {% block djfrontend_ios_fix %}
     {% endblock djfrontend_ios_fix %}
 
-    <script src="{% static "js/base.js" %}"></script>
+    <script src="{% static "js/multielements.js" %}"></script>
     <script src="{% static "js/plugins/morris/raphael.min.js" %}"></script>
     <script src="{% static "js/plugins/morris/morris.min.js" %}"></script>
     <script src="{% static "js/plugins/morris/morris-data.js" %}"></script>
@@ -54,7 +54,7 @@
                 <li><a href="/index/dryrun/">Dry Run Test</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-left">
-                  <li><a href="/index/index/">SingleElement Page</a></li>
+                <li><a href="/index/index/">SingleElement Page</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="/index/test/" id="testUrl" onclick="updateUrl()">Test Page</a></li>
@@ -69,6 +69,8 @@
                 <li><a href="/index/visualization/" id="visualUrl">Visualization</a></li>
             </ul>
 
+
+
         </nav>
 
         <div id="page-wrapper">
@@ -79,7 +81,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Data Observatory <small>Configuration</small>
+                            Data Observatory <small>Dry Run Test</small>
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
@@ -88,70 +90,58 @@
                         </ol>
                     </div>
                 </div>
+               <!-- 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group" id="inputForms">
+                            <label for="country">Country:</label>
+                            <input type="text" class="form-control" id="country" value="germany"></input>
+                            <label for="gender">Gender:</label>
+                            <input type="text" class="form-control" id="gender" value="male"></input>
+                        </div>
+                    </div>
+                </div>
+                -->
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading col-lg-12">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Chart</h3>
+                            </div>
+                           <div class="fullrow">
+                               <div id="line-chart-multielements" style="height:400px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading col-lg-12">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Config</h3>
+                            </div>
+                           <div class="fullrow">
+                               <pre id="configAdjust" style="height:400px;">
+                                   
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
 
-    <form role="form">
-        <div class="form-group">
-          <label for="config_json">config.json:</label>
-          <textarea class="form-control" rows="15" id="config_json">
-        {
-        "country":{
-            "germany":{
-                "0.9":"German",
-                "0.1":"Default"
-                },
-            "india":{
-                "0.9":"Indian",
-                "0.1":"Default"
-                }
-            }
-        }
-        </textarea>
-        </div>
-        
-        <div class="form-group">
-            <label for="config_sites">site_links:</label>
-            <textarea class="form-control" rows="3" id="config_sites">
-                http://localhost:8000/index/test/?country=india&gender=male, http://localhost:8000/index/test/?country=germany&gender=male
-            </textarea>
-        </div>
-        
-        <div class="form-group">
-            <label for="openwpm_dir">OpenWPM_base_directory:</label>
-            <input type="text" class="form-control" id="openwpm_dir">
-        </div>
-
-        <div class="form-group">
-            <label for="db_dir">DataObservatory_base_directory:</label>
-            <input type="text" class="form-control" id="db_dir">
-        </div>
-
-    
-        <div class="form-group">
-            <label for="iter">iterations:</label>
-            <input type="text" class="form-control" id="iter" value="1">
-        </div>
-        
-        <div class="form-group">
-            <label for="num_browser">number_browsers</label>
-            <input type="text" class="form-control" id="num_browser" value="1">
-        </div>
-
-        <div class="form-group">
-            <label for="file_name">file_name</label>
-            <input type="text" class="form-control" id="file_name" value="prob_0.1">
-        </div>
-
-
-    </form>
-        
-    <div class="row">
-        <div class="col-lg-12 col-lg-offset-0">
-            <button type="button" class="btn btn-primary" onclick="updateConfiguration()">Configure</button>
-            <button type="button" onclick="location.href = '/index/index';" id="myButton" class="btn btn-primary" >Return to Dashboard</button>
-        </div>
-    </div>
-
-           </div>
+                </div>
+                 <div class="col-lg-8" id="prob_menu">
+                    <ul class="nav nav-pills nav-justified">
+                        <!--
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                        -->
+                    </ul>
+                    <!--
+                    <button type="button" class="btn btn-primary" onclick="loadDoc()">Update Chart</button>
+                    <button type="button" class="btn btn-success">Run Test</button>
+                    -->
+                </div>
+                <!-- /.row -->
+            </div>
             <!-- /.container-fluid -->
 
         </div>
