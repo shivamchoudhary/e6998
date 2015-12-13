@@ -2173,9 +2173,9 @@
         }
     },
     "detected_counter": {
-        "\n       Indian\n      ": 42.5,
-        "\n       German\n      ": 45.5,
-        "\n       Female\n      ": 40.5,
-        "\n       Male\n      ": 47.0
+ " Indian": 42.5,
+ " German": 45.5,
+ " Female": 40.5,
+ " Male": 47.0
     }
 }
