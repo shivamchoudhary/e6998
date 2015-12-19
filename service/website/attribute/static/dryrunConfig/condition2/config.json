@@ -1,0 +1,23 @@
+        {
+        "country":{
+            "germany":{
+                "0.7":"German",
+                "0.3":"Default"
+                },
+            "india":{
+                "0.7":"Indian",
+                "0.3":"Default"
+                }
+            },
+        "gender":{
+            "male":{
+                "0.3":"Male",
+                "0.7":"Static"
+                },
+            "female":{
+                "0.4":"Female",
+                "0.6":"Static"
+                }
+            }
+
+        }

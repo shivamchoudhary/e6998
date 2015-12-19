@@ -12,8 +12,10 @@ urlpatterns = [
         url(r'^multielements/$',views.multielements,name='multielements'),
         url(r'^chart/$',views.chart,name='chart'),
         url(r'^multichart/$',views.multichart,name='multichart'),
+        url(r'^dryrunchart/$',views.dryrunchart,name='dryrunchart'),
         url(r'^prob/$',views.probability,name='probability'),
         url(r'^multiprob/$',views.multiprobability,name='multiprobability'),
+        url(r'^dryrunnumber/$',views.dryrunnumber,name='dryrunnumber'),
         url(r'^visualization/(?P<path>.*)$',views.visualization,name='visualization'),
         ]
 urlpatterns += staticfiles_urlpatterns()
